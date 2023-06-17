@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../company/background.jpg');
+    background-repeat: no-repeat;
+}
+
+.bottom-border {
+    border: none;
+    border-bottom: 1px solid #1d1616;
+    border-radius: 0;
+    box-shadow: none;
+  }
+.container {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input{
+        border: none;
+          border-bottom-color: currentcolor;
+          border-bottom-style: none;
+          border-bottom-width: medium;
+        border-bottom: 1px solid #1d1616;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+        background: inherit;
+        width: 330px;
+}
+.input {
+    /* padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px; */
+    border: none;
+    border-bottom: 1px solid #1d1616;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px;
+    background: inherit;
+    width: 600px;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+    }
+}
+
+/* 
+*
+* login form toogle password icon
+*/
+.toggle-pwd {
+    cursor: pointer;
+    position: relative;
+    right: -300px;
+    top: -25px;
+}
+
+/*
+* show error message will disappear after 3.5 ses
+*/
+.hide-message {
+    animation: hideAnimation 0s ease-in 3.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+    to {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+/*
+* for input file type with circle shape
+*/
+.file-input {
+    /* position: absolute; */
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    top: 0px;
+    background-color: #75d0a5;
+    text-align: center;
+}
+
+/* Styling for the file input label */
+.file-input-label {
+    display: block;
+    margin-top: 50px;
+}
+
+/* Hide the actual file input */
+.file-input input[type="file"] {
+    position: relative;
+    left: -9999px;
+}
+
+#preview {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    left: 0px;
+    top: -100px
+}
+
+/*
+* Detail Page
+*/
+.card-container {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #85ddc02e;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(102, 61, 61, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.employee-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.employee-details {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+.field-value {
+    display: inline-block;
+}
+
+/*
+* alert box
+*/
+.alert-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.alart-box-card {
+    background-color: #9dead8;
+    padding: 70px;
+    padding-right: 70px;
+    padding-right: 70px;
+    padding-right: 70px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(102, 61, 61, 0.1);
+    margin: 0 auto;
+    padding-right: 90px;
+    bottom: 300px;
+    position: relative;
+    display: none;
+}
+
+.alert-msg-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: red;
+}
