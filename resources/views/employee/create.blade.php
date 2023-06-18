@@ -1,15 +1,8 @@
-@extends('layout.app')
-
-@section('title')
-Create
-@endsection
-
-@section('head')
-@endsection
-
-@section('content')
-<div class="card-container">
-    <div class="card">
+<div  class="form-card-container">
+    <div class="form-card" id="save-form">
+        <div id="window-close" width="30" height="30">
+            <i class="fa fa-times fa-x" style="color:red"></i>
+        </div>
     <div class="content">
         <div class="row">
         <div class="col-sm-12">
@@ -125,6 +118,3 @@ Create
     </div>
     </div>
 </div>
-@endsection
-@section('footer')
-@endsection

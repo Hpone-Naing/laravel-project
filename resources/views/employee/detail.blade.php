@@ -10,6 +10,9 @@ Edit Employee
 @section('content')
 <div class="card-container">
     <div class="card">
+    <a href="/show-all-pages">
+            <i class="fa fa-times fa-x" style="color:red"></i>
+        </a>
     <div class="content">
         <div class="row">
         <div class="col-sm-12">

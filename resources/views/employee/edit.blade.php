@@ -10,10 +10,13 @@ Edit Employee
 @section('content')
 <div class="card-container">
     <div class="card">
+        <a href="/show-all-pages">
+            <i class="fa fa-times fa-x" style="color:red"></i>
+        </a>
     <div class="content">
         <div class="row">
         <div class="col-sm-12">
-            <h1 class="display-8">Edit Employee</h1>
+            <h1 class="display-8">Employee Detail</h1>
         <div>
             @if ($errors->any())
             <div class="alert alert-danger">

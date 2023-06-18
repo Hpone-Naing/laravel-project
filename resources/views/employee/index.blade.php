@@ -8,12 +8,13 @@ Employee Lsit
 @endsection
 
 @section('content')
-<div class="row list-container">
-<div class="col-sm-12">
-    <h1 class="display-3">Employee List</h1>
+<div class="row list-container">  
+  <div class="col-sm-12">
+    <div id="parent">
+    <h1 class="display-8">Employee List</h1>
     <div>
-      <a style="margin: 19px;" href="/show-save-pages" class="btn btn-primary">New+</a>
-    </div>    
+      <a style="margin: 19px;" class="btn btn-primary" id="save">New+</a>
+    </div>
   <table class="table table-striped">
     <thead>
         <tr>
@@ -42,12 +43,14 @@ Employee Lsit
         </tr>
     </tbody>
   </table>
+    </div>
+  @include('employee.create')
 </div>
 </div>
 
 <div class="alert-box-container">
     <div class="alart-box-card">
-        <div class="alert-msg-name">Are you sure want to delete?</div>
+        <div class="alert-msg-name mt-4">Are you sure want to delete?</div>
             <form method="delete" action="#">
                 @csrf
                 @method('DELETE')
@@ -58,7 +61,7 @@ Employee Lsit
                 </div>
             </form>
     </div>
-</div>
+</div>   
 @endsection
 @section('footer')
 @endsection

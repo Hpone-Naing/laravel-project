@@ -19,7 +19,11 @@ Route::get('/', function () {
     return view('authentication.login');
 });
 
-Route::post("login-users", [EmployeeController::class, "showEmployeesForm"])->middleware('check-login-user');
+Route::post("login-users", function(){
+    return redirect()->route("show-all");
+})->middleware('check-login-user');
+
+Route::get("show-all-pages", [EmployeeController::class, "showEmployeesForm"])->name("show-all");
 Route::get("show-edit-pages", [EmployeeController::class, "showEditForm"]);
 Route::get("show-save-pages", [EmployeeController::class, "showSaveForm"]);
 Route::get("show-detail-pages", [EmployeeController::class, "showDetailForm"]);

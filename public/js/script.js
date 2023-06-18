@@ -63,3 +63,27 @@ function loadPhoto(event) {
     };
     reader.readAsDataURL(file);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("save").addEventListener("click", function() {    
+      $saveForm = document.getElementById("save-form").style.display='flex';
+      document.getElementById("parent").style.filter="blur(5px)";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("window-close").addEventListener("click", function() {  
+      console.log("here ");  
+      document.getElementById("save-form").style.display='';
+      document.getElementById("parent").style.filter="blur(0px)";
+  });
+});
+
+function blurBackground() {
+  document.getElementsByClassName("list-container")[0].style.filter="blur(5px)";
+}
+
+function removeBlue() {
+  document.getElementsByClassName("list-container")[0].style.filter="";
+}
+

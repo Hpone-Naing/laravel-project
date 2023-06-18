@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../company/background.jpg');
+    /* background-image: url('../company/background.jpg'); */
     background-repeat: no-repeat;
 }
 
@@ -147,29 +147,6 @@ input[type="submit"] {
 /*
 * Detail Page
 */
-.card-container {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.card {
-    background-color: #85ddc02e;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(102, 61, 61, 0.1);
-    width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;    
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -196,6 +173,56 @@ label {
     display: inline-block;
 }
 
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh;  */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;*/
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgb(119, 136, 101);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;  */
+  
+}
+
+/*
+*for save form edit form
+*/
+.form-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;*/
+}
+
+.form-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgb(119, 136, 101);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;  
+    position: relative;
+    bottom: 40px;
+    display: none;
+}
+
 /*
 * alert box
 */
@@ -207,17 +234,20 @@ label {
 }
 
 .alart-box-card {
-    background-color: #9dead8;
-    padding: 70px;
-    padding-right: 70px;
-    padding-right: 70px;
-    padding-right: 70px;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(102, 61, 61, 0.1);
-    margin: 0 auto;
-    padding-right: 90px;
-    bottom: 300px;
-    position: relative;
+
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    animation: slideIn 0.5s forwards;
+    background-color: #fafffe;
+    box-shadow: 0 2px 5px rgba(102, 41, 41, 0.61);
+    border: 1px solid #c8acac;
+    padding: 20px;
+    text-align: center;
     display: none;
 }
 
@@ -227,3 +257,40 @@ label {
     margin-bottom: 10px;
     color: red;
 }
+
+@keyframes slideIn {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  
+
+#window-close {
+    padding: 20px;
+    cursor: pointer;
+}
+
+#popupBox {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  
