@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+function saveFormReload() {
+  console.log("here save form reload");
+  $saveForm = document.getElementById("save-form").style.display='flex';
+  document.getElementById("parent").style.filter="blur(5px)";
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("window-close").addEventListener("click", function() {  
       console.log("here ");  

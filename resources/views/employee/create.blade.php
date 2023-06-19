@@ -9,7 +9,8 @@
             <h1 class="display-8">Add a Employee</h1>
         <div>
             @if ($errors->any())
-            <div class="alert alert-danger">
+            <div id="exit-error" onload="saveFormReload();"></div>
+            <div class="alert alert-danger hide-message">
                 <ul>
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>

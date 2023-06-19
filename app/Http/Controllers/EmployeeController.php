@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmployeeRequest;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -25,5 +26,9 @@ class EmployeeController extends Controller
     public function showDetailForm() 
     {
         return view('employee.detail');
+    }
+    public function saveEmployee(EmployeeRequest $request) 
+    {
+        return redirect()->route('show-all')->with('success', 'Employee created successfully.');
     }
 }
