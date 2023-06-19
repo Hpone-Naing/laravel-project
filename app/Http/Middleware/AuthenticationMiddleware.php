@@ -18,7 +18,6 @@ class AuthenticationMiddleware
     {
         $username = $request->username;
         $password = $request->password;
-
         if ($username == 'h' && $password == 'h') {
             return $next($request);
         }

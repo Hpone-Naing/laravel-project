@@ -18,13 +18,13 @@ Employee Lsit
   <table class="table table-striped">
     <thead>
         <tr>
-          <td>ID</td>
-          <td>Name</td>
-          <td>Email</td>
-          <td>Job Title</td>
-          <td>Gender</td>
-          <td>Image</td>
-          <td>Actions</td>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job Title</th>
+          <th>Gender</th>
+          <th>Image</th>
+          <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -37,7 +37,7 @@ Employee Lsit
             <td>lisa.jpg</td>
             <td>
               <a href="/show-detail-pages"><i class="fa-regular fa-eye fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Detail" style="color:#244a26"></i></a>
-              <a href="/show-edit-pages/"><i class="fas fa-edit fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Edit" style="color:blue"></i></a>
+              <a id="edit-btn"><i class="fas fa-edit fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Edit" style="color:blue"></i></a>
               <a name="show-alert-msg"><i class="fa fa-trash fa-lg ms-2" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete" style="color:red"></i></a>
             </td>
         </tr>

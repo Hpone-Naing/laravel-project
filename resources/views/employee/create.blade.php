@@ -6,7 +6,7 @@
     <div class="content">
         <div class="row">
         <div class="col-sm-12">
-            <h1 class="display-8">Add a Employee</h1>
+            <h1 class="display-8" name="form-title"></h1>
         <div>
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -17,7 +17,7 @@
                 </ul>
             </div><br />
             @endif
-            <form method="post" action="/save-employees" enctype="multipart/form-data">
+            <form id="save-create" method="post" action="/save-employees" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group d-flex justify-content-center align-items-center">    
                     <label class="file-input">
@@ -28,19 +28,15 @@
                     </label>
                 </div>
                     <div class="form-group">    
-                        <!-- <label for="">First Name:</label> -->
                         <input type="text" class="form-control input" placeholder="First Name" name="first_name"/>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="">Last Name:</label> -->
                         <input type="text" class="form-control input" placeholder="Last Name" name="last_name"/>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="">Email:</label> -->
                         <input type="text" class="form-control input" placeholder="Email" name="email"/>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="">Job Title:</label> -->
                         <input type="text" class="form-control input" placeholder="Job Title" name="job_title"/>
                     </div> 
 

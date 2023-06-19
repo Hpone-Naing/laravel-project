@@ -39,9 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-/*
-*  when create or edit form's upload photo button click , it read image from specific path and then  show upload photo icon dynamically.
-*/
+
 function loadPhoto(event) {
     var e = event.target;
     var file = e.files[0];
@@ -66,16 +64,22 @@ function loadPhoto(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("save").addEventListener("click", function() {    
-      $saveForm = document.getElementById("save-form").style.display='flex';
-      document.getElementById("parent").style.filter="blur(5px)";
+      // $saveForm = document.getElementById("save-form").style.display='flex';
+      // document.getElementById("parent").style.filter="blur(5px)";
+      reloadSaveForm();
   });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("window-close").addEventListener("click", function() {  
-      console.log("here ");  
+  document.getElementById("window-close").addEventListener("click", function() {   
       document.getElementById("save-form").style.display='';
       document.getElementById("parent").style.filter="blur(0px)";
+      var form = document.getElementById("save-create");
+      form.reset();
+      var imagePreview = document.getElementById("preview");
+      var image = imagePreview.childNodes[0];
+      image.src = "";
+      
   });
 });
 
@@ -87,3 +91,36 @@ function removeBlue() {
   document.getElementsByClassName("list-container")[0].style.filter="";
 }
 
+/*
+* laod create-edit form and background blur and change title to Add New Employee
+*/
+function reloadSaveForm() {
+    $saveForm = document.getElementById("save-form").style.display='flex';
+    document.getElementById("parent").style.filter="blur(5px)";
+    var formTitle = document.getElementsByName("form-title")[0];
+    formTitle.innerHTML ="Add New Employee";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("edit-btn").addEventListener("click", function() {    
+      var row = this.parentElement.parentElement;
+      var employee = new Object;
+      employee.employee_id = row.cells[0].innerText;
+      employee.name = row.cells[1].innerText;
+      employee.email = row.cells[2].innerText;
+      employee.jobTitle = row.cells[3].innerText;
+      employee.gender = row.cells[4].innerText;
+      employee.image = row.cells[5].innerText;
+      reloadSaveForm();
+      var first_name = document.getElementsByName("first_name")[0];
+      var last_name = document.getElementsByName("last_name")[0];
+      var email = document.getElementsByName("email")[0];
+      var job_title = document.getElementsByName("job_title")[0];
+      first_name.value = employee.employee_id;
+      last_name.value = employee.employee_name;
+      email.value = employee.email;
+      job_title.value = employee.jobTitle;
+      //console.log(employee);
+
+  });
+});

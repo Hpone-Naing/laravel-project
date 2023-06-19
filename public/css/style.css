@@ -220,6 +220,7 @@ label {
     padding: 30px;  
     position: relative;
     bottom: 40px;
+    animation: formSlideIn 0.5s forwards;
     display: none;
 }
 
@@ -234,8 +235,6 @@ label {
 }
 
 .alart-box-card {
-
-
     position: fixed;
     top: 50%;
     left: 50%;
@@ -291,6 +290,15 @@ label {
     }
     100% {
       top: 50%;
+    }
+  }
+
+  @keyframes formSlideIn {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: -10%;
     }
   }
   
