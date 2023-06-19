@@ -221,6 +221,7 @@ label {
     padding: 30px;  
     position: relative;
     bottom: 40px;
+    animation: formSlideIn 0.5s forwards;
     display: none;
 }
 
@@ -235,8 +236,6 @@ label {
 }
 
 .alart-box-card {
-
-
     position: fixed;
     top: 50%;
     left: 50%;
@@ -294,6 +293,7 @@ label {
       top: 50%;
     }
   }
+<<<<<<< HEAD
   
 
   /*
@@ -334,3 +334,15 @@ label {
 .search-select-box {
     width:150px
 }
+=======
+
+  @keyframes formSlideIn {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: -10%;
+    }
+  }
+  
+>>>>>>> 41c195afe7317f32f55edbb02010400f972e13a8

@@ -8,6 +8,7 @@ Employee Lsit
 @endsection
 
 @section('content')
+<<<<<<< HEAD
 
 @if ($errors->any())
   <div id="myDiv" class="save-form-reload"></div>
@@ -17,6 +18,46 @@ Employee Lsit
 @if(session('success'))
 <div id="hideMeAfter5Seconds" class="alert alert-success hide-message">
     {{ session('success') }}
+=======
+<div class="row list-container">  
+  <div class="col-sm-12">
+    <div id="parent">
+    <h1 class="display-8">Employee List</h1>
+    <div>
+      <a style="margin: 19px;" class="btn btn-primary" id="save">New+</a>
+    </div>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job Title</th>
+          <th>Gender</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="emp_id" name="employee_id">1</td>
+            <td>Hpone Naing Tun</td>
+            <td>hponenaingtun@gmail.com</td>
+            <td>Lisa's husbant</td>
+            <td>male</td>
+            <td>lisa.jpg</td>
+            <td>
+              <a href="/show-detail-pages"><i class="fa-regular fa-eye fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Detail" style="color:#244a26"></i></a>
+              <a id="edit-btn"><i class="fas fa-edit fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Edit" style="color:blue"></i></a>
+              <a name="show-alert-msg"><i class="fa fa-trash fa-lg ms-2" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete" style="color:red"></i></a>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+    </div>
+  @include('employee.create')
+</div>
+>>>>>>> 41c195afe7317f32f55edbb02010400f972e13a8
 </div>
 @endif
 <div class="row list-container">
