@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    /* background-image: url('../company/background.jpg'); */
+     /* background-image: url('../company/background.jpg'); */
     background-repeat: no-repeat;
 }
 
@@ -12,14 +12,14 @@ body {
     border-radius: 0;
     box-shadow: none;
   }
-.container {
+/* .container {
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 95vh;
-}
+} */
 
 .login-container {
     background-color: rgba(255, 255, 255, 0.8);
@@ -112,6 +112,7 @@ input[type="submit"] {
 * for input file type with circle shape
 */
 .file-input {
+<<<<<<< HEAD
    /* position: absolute; */
    display: inline-block;
    cursor: pointer;
@@ -123,6 +124,19 @@ input[type="submit"] {
    background-color: #fff;;
    box-shadow: 0 2px 4px rgba(26, 31, 32, 0.72);
    text-align: center;
+=======
+    /* position: absolute; */
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    top: 0px;
+    background-color: #fff;;
+    box-shadow: 0 2px 4px rgba(26, 31, 32, 0.72);
+    text-align: center;
+>>>>>>> 01b8299da347ac44a0c328c8d494fad752da4a4f
 }
 
 /* Styling for the file input label */
@@ -307,6 +321,48 @@ label {
       top: 50%;
     }
   }
+<<<<<<< HEAD
+  
+
+  /*
+  * Setting elements inline level
+  */
+
+  .inline-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: inherit;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  /* .inline-container {
+    white-space: nowrap;
+} */
+
+.box {
+    display: inline-block;
+    background-color: inherit;
+    margin-right: 10px;
+}
+
+.search-icon {
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+}
+
+/*
+*index search by select box
+*/
+.search-select-box {
+    width:150px
+}
+=======
 
   @keyframes formSlideIn {
     0% {
@@ -317,6 +373,7 @@ label {
     }
   }
   
+<<<<<<< HEAD
   .inline-container {
     width: 100%;
     margin: 0 auto;
@@ -337,3 +394,6 @@ label {
     right: 40px;
     cursor: pointer;
 }
+=======
+>>>>>>> 41c195afe7317f32f55edbb02010400f972e13a8
+>>>>>>> 01b8299da347ac44a0c328c8d494fad752da4a4f

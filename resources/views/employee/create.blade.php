@@ -10,6 +10,10 @@
         <div>
 
             @if ($errors->any())
+<<<<<<< HEAD
+=======
+            <div id="exit-error" onload="saveFormReload();"></div>
+>>>>>>> 01b8299da347ac44a0c328c8d494fad752da4a4f
             <div class="alert alert-danger hide-message">
                 <ul>
                     @foreach ($errors->all() as $error)
