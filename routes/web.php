@@ -27,3 +27,4 @@ Route::get("show-all-pages", [EmployeeController::class, "showEmployeesForm"])->
 Route::get("show-edit-pages", [EmployeeController::class, "showEditForm"]);
 Route::get("show-save-pages", [EmployeeController::class, "showSaveForm"]);
 Route::get("show-detail-pages", [EmployeeController::class, "showDetailForm"]);
+Route::post("save-employees", [EmployeeController::class, "saveEmployee"]);

@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\Employee;
 use Symfony\Component\HttpFoundation\Response;
 
 class AuthenticationMiddleware
@@ -23,4 +24,5 @@ class AuthenticationMiddleware
         }
         return new Response(view("authentication.login")->with("error", "Invalid Credentials"));
     }
+
 }

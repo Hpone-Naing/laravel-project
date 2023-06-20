@@ -12,7 +12,7 @@ Edit Employee
     <div class="card">
     <a href="/show-all-pages">
             <i class="fa fa-times fa-x" style="color:red"></i>
-        </a>
+    </a>
     <div class="content">
         <div class="row">
         <div class="col-sm-12">

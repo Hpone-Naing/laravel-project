@@ -107,9 +107,13 @@ document.addEventListener("DOMContentLoaded", function() {
       var employee = new Object;
       employee.employee_id = row.cells[0].innerText;
       employee.name = row.cells[1].innerText;
-      employee.email = row.cells[2].innerText;
-      employee.jobTitle = row.cells[3].innerText;
+      employee.nrc = row.cells[2].innerText;
+      employee.phone = row.cells[3].innerText;
+      employee.email = row.cells[4].innerText;
       employee.gender = row.cells[4].innerText;
+      employee.dob = row.cells[4].innerText;
+      employee.address = row.cells[4].innerText;
+
       employee.image = row.cells[5].innerText;
       reloadSaveForm();
       var first_name = document.getElementsByName("first_name")[0];

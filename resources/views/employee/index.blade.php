@@ -11,8 +11,52 @@ Employee Lsit
 <div class="row list-container">  
   <div class="col-sm-12">
     <div id="parent">
+    @if (isset($saveSuccess))
+            <div class="alert alert-success hide-message">
+                <ul>
+                    <li>{{ $saveSuccess }}</li>
+                </ul>
+            </div><br />
+            @endif
+
     <h1 class="display-8">Employee List</h1>
-    <div>
+    <div class="inline-container">
+                <form  style="display:inline">
+                <div class="box">
+                    <a href="/posts/download-excel/" class="btn btn-outline-primary" style="border-radius: 50px;">PDF  <i class="fa fa-download"></i></a>
+                </div>
+
+                <div class="box">
+                    <a href="/posts/download-excel/" class="btn btn-outline-primary" style="border-radius: 50px;">Excel  <i class="fa fa-download"></i></a>
+                </div>
+
+                <div class="box">
+                  <select class="form-select search-select-box" aria-label=".form-select-lg example">
+                      <option value="1">Font End</option>
+                      <option value="2">Back End</option>
+                      <option value="3">Full Stack</option>
+                      <option value="4">Mobile</option>
+                  </select>
+                </div>
+
+                <div class="box">
+                  <select class="form-select search-select-box" aria-label=".form-select-lg example">
+                            <option value="1">Begineer</option>
+                            <option value="2">Junineer Engineer</option>
+                            <option value="3">Engineer</option>
+                            <option value="4">Senior Engineer</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <input type="text" class="form-control form-input" name="search" placeholder="Search ID, All" onkeyup="searchData(event)" style="width:300px">
+                </div>
+                <div class="box">
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                </div>
+            </form>
+          </div>
+
+    <div style="float:right">
       <a style="margin: 19px;" class="btn btn-primary" id="save">New+</a>
     </div>
   <table class="table table-striped">
@@ -21,9 +65,9 @@ Employee Lsit
           <th>ID</th>
           <th>Name</th>
           <th>Email</th>
-          <th>Job Title</th>
-          <th>Gender</th>
-          <th>Image</th>
+          <th>Career</th>
+          <th>Leven</th>
+          <th>Phone Number</th>
           <th>Actions</th>
         </tr>
     </thead>
@@ -36,8 +80,8 @@ Employee Lsit
             <td>male</td>
             <td>lisa.jpg</td>
             <td>
-              <a href="/show-detail-pages"><i class="fa-regular fa-eye fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Detail" style="color:#244a26"></i></a>
-              <a id="edit-btn"><i class="fas fa-edit fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Edit" style="color:blue"></i></a>
+              <a href="show-detail-pages"><i class="fa-regular fa-eye fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Detail" style="color:#244a26"></i></a>
+              <a href="show-edit-pages"><i class="fas fa-edit fa-lg ms-2" data-toggle="tooltip" data-placement="top" title="Edit" style="color:blue"></i></a>
               <a name="show-alert-msg"><i class="fa fa-trash fa-lg ms-2" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Delete" style="color:red"></i></a>
             </td>
         </tr>
